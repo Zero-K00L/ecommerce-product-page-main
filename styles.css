@@ -1,0 +1,90 @@
+/* Color Variables */
+
+:root {
+    --orange: hsl(26, 100%, 55%);
+    --paleOrange: hsl(25, 100%, 94%);
+    --veryDarkBlue: hsl(220, 13%, 13%);
+    --darkGrayishBlue: hsl(219, 9%, 45%);
+    --grayishBlue: hsl(220, 14%, 75%);
+    --lightGrayishBlue: hsl(223, 64%, 98%);
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);                                /* with 75% opacity for lightbox background */
+}
+
+
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*,::before, ::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+}
+
+.main {
+    width: 100%;
+    height: 900px;
+}
+
+.nav-bar {
+    width: 100%;
+    height: 52px;
+}
+
+.avatar {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    top: 4px;
+}
+
+.image-container {
+    height: 302px;
+    width: 100%;
+    overflow: hidden;
+    background-image: url('images/image-product-1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.nav-icon-container {
+    margin-top: 14px;
+    margin-left: 22px;
+}
+
+.hamburger-menu {
+    margin-right: 12px;
+}
+
+.logo {
+    position: relative;
+    top: 1px;
+    margin-right: 85px;
+}
+
+.cart-icon {
+    margin-right: 18px;
+    position: relative;
+    top: 3px;
+}
+
+
+
+
+.product-image-1 {
+    width: 100%;
+    height: 375px;
+    position: relative;
+    top: -37px;
+}
+
+
+
+
+/* .attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); } */
