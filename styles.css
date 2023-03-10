@@ -11,7 +11,6 @@
     --black: hsl(0, 0%, 0%);                                /* with 75% opacity for lightbox background */
 }
 
-
 html {
     font-size: 100%;
     box-sizing: border-box;
@@ -50,6 +49,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    position: relative;
 }
 
 .nav-icon-container {
@@ -73,15 +73,40 @@ body {
     top: 3px;
 }
 
+.arrow-previous-container {
+    position: absolute;
+    top: 43.8%;
+    left: 4%;
+    width: 40px;
+    background-color: var(--white);
+    border-radius: 50%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.arrow-previous {
+    width: 11px;
+    height: 13px;
+}
 
+.arrow-next-container {
+    width: 40px;
+    background-color: var(--white);
+    border-radius: 50%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-.product-image-1 {
+/* .product-image-1 {
     width: 100%;
     height: 375px;
     position: relative;
     top: -37px;
-}
+} */
 
 
 
