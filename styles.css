@@ -28,7 +28,7 @@ body {
     width: 100%;
     height: 900px;
     background-color: var(--white);
-    font-family: 'Kumbh Sans', sans-serif;
+    font-family: 'Kumbh Sans', 'sans-serif';
 }
 
 .nav-bar {
@@ -136,11 +136,50 @@ body {
 }
 
 .price-container {
+    display: flex;
+    align-items: flex-start;
     margin-left: 23px;
 }
 
+.price {
+    font-size: 29px;
+    font-weight: 700;
+    margin-right: 19px;
+    margin-top: 8px;
+}
 
+.discount-container {
+    background-color: var(--paleOrange);
+    color: var(--orange);
+    width: 50px;
+    text-align: center;
+    height: 26px;
+    position: relative;
+    margin-right: 95px;
+    border-radius: 6px;
+    margin-top: 13px;
+}
 
+.discount-amount {
+    position: absolute;
+    top: -13px;
+    left: 8px;
+    font-weight: 700;
+}
+
+.original-price {
+    color: var(--grayishBlue);
+    text-decoration: line-through;
+    font-weight: 700;
+}
+
+.product-counter {
+    width: 327px;
+    height: 56px;
+    margin-left: 23px;
+    background-color: var(--lightGrayishBlue);
+    border-radius: 10px;
+}
 
 
 /* .product-image-1 {
