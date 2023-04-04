@@ -71,12 +71,35 @@ body {
     margin-right: 85px;
 }
 
+.cart-icon-container {
+    display: inline-block;
+    position: relative;
+}
+
 .cart-icon {
     margin-right: 18px;
-    position: relative;
-    top: 3px;
+/*     position: relative; */
+/*     top: 3px; */
     cursor: pointer;
 }
+
+.cart-counter {
+    width: 19px;
+    height: 14px;
+    position: absolute;
+    top: -5px;
+    right: 12px;
+    background-color: var(--orange);
+    color: var(--white);
+    font-size: 10px;
+    font-weight: 700;
+    border-radius: 10px;
+    padding-left: 5px;
+    padding-top: 1px;
+}
+
+
+
 
 .arrow-previous-container {
     position: absolute;
@@ -286,6 +309,11 @@ body {
     margin-top: 0;
     color: var(--darkGrayishBlue);
     line-height: 1.5;
+}
+
+.cart-total-price {
+    font-weight: 700;
+    color: var(--black);
 }
 
 .trash-icon {
