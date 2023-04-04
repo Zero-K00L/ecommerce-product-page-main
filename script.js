@@ -51,6 +51,8 @@ const cartTotal = document.querySelector('.cart-total-price');
 cartBtn.addEventListener('click',function() {
     if(productAmount.innerText == 0) {
         cartCounter.classList.add('hidden');
+        fullCart.classList.add('hidden');
+        emptyCart.classList.remove('hidden');
     }
     else if(productAmount.innerText > 0) {
         cartCounter.innerText = productAmount.innerText;
@@ -61,3 +63,14 @@ cartBtn.addEventListener('click',function() {
         cartTotal.innerText = '  $' + 125.00 * cartQuantity.innerText + ".00";
     }
 });
+
+// clears current cart inventory when trash can icon is pressed
+
+const trashIcon = document.querySelector('.trash-icon');
+
+trashIcon.addEventListener('click', function(){
+    cartCounter.classList.add('hidden');
+    fullCart.classList.add('hidden');
+    emptyCart.classList.remove('hidden');
+});
+
