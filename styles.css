@@ -41,6 +41,7 @@ body {
     height: 24px;
     position: relative;
     top: 4px;
+    cursor: pointer;
 }
 
 .image-container {
@@ -61,6 +62,7 @@ body {
 
 .hamburger-menu {
     margin-right: 12px;
+    cursor: pointer;
 }
 
 .logo {
@@ -73,6 +75,7 @@ body {
     margin-right: 18px;
     position: relative;
     top: 3px;
+    cursor: pointer;
 }
 
 .arrow-previous-container {
@@ -86,6 +89,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 .arrow-previous {
@@ -103,6 +107,7 @@ body {
     position: absolute;
     top: 44%;
     left: 85%;
+    cursor: pointer;
 }
 
 .arrow-next {
@@ -130,7 +135,7 @@ body {
 .main-description {
     color: var(--darkGrayishBlue);
     font-size: 15px;
-    width: 99%;
+    width: 98%;
     line-height: 1.7;
     margin-top: 0;
 }
@@ -191,6 +196,14 @@ body {
     margin-bottom: 19px;
 }
 
+.minus-btn {
+    cursor: pointer;
+}
+
+.plus-btn {
+    cursor: pointer;
+}
+
 .product-amount {
     font-weight: 700;
 }
@@ -203,9 +216,105 @@ body {
     border: none;
     border-radius: 10px;
     color: var(--white);
-    font-weight: bold;
+    font-weight: 700;
+    font-size: 16px;
+    font-family: 'Kumbh Sans', sans-serif;
     box-shadow: 1px 9px 18px 0px var(--paleOrange);
+    cursor: pointer;
 }
+
+.cart-icon-btn {
+    width: 18px;
+    position: relative;
+    left: 2px;
+    margin-right: 13px;
+    top: 2px;
+}
+
+/* Cart Screen */
+
+.cart-inventory {
+    width: 362px;
+    height: 258px;
+    z-index: 1;
+    position: relative;
+    background-color: var(--white);
+    margin-left: 6px;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 23px 0px var(--darkGrayishBlue);
+}
+
+.cart-header-container {
+    height: 68px;
+    border-bottom: 1px solid var(--grayishBlue);
+    padding-top: 22px;
+    padding-left: 24px;
+}
+
+.cart-header {
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.cart-display-empty {
+    font-weight: 700;
+    color: var(--darkGrayishBlue);
+    margin-top: 77px;
+    margin-bottom: 0;
+    margin-left: 109px;
+}
+
+.sneaker-cart-thumbnail {
+    width: 50px;
+    height: 50px;
+    margin-top: 25px;
+    margin-left: 25px;
+    border-radius: 5px;
+    margin-right: 12px;
+}
+
+.cart-text-container {
+    display: inline-block;
+    width: 67%;
+    position: relative;
+    top: -10px;
+}
+
+.cart-display-full {
+    margin-top: 0;
+    color: var(--darkGrayishBlue);
+    line-height: 1.5;
+}
+
+.trash-icon {
+    position: relative;
+    top: -14px;
+    left: -15px;
+    cursor: pointer;
+}
+
+.checkout-btn {
+    width: 312px;
+    height: 56px;
+    margin-left:25px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--orange);
+    color: var(--white);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+
+/* Helper Classes */
+
+.hidden {
+    display: none;
+}
+
 
 /* .product-image-1 {
     width: 100%;
@@ -213,9 +322,6 @@ body {
     position: relative;
     top: -37px;
 } */
-
-
-
 
 /* .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); } */
