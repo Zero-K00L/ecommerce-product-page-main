@@ -74,3 +74,46 @@ trashIcon.addEventListener('click', function(){
     emptyCart.classList.remove('hidden');
 });
 
+
+// allows mobile users to cycle through different pictures of sneaker products using the left and right arrow buttons
+
+
+const arrowPrevious = document.querySelector('.arrow-previous-container');
+const arrowNext = document.querySelector('.arrow-next-container');
+const sneakerImage = document.querySelector('.image-container');
+const imageArr = [
+  'images/image-product-1.jpg',
+  'images/image-product-2.jpg',
+  'images/image-product-3.jpg',
+  'images/image-product-4.jpg'
+];
+let currentImageIndex = 0;
+
+// Set the initial image
+sneakerImage.style.backgroundImage = `url(${imageArr[currentImageIndex]})`;
+
+arrowPrevious.addEventListener('click', function() {
+  // Decrement the current image index
+  currentImageIndex--;
+
+  // If the current index is less than 0, wrap around to the last image
+  if (currentImageIndex < 0) {
+    currentImageIndex = imageArr.length - 1;
+  }
+
+  // Set the new image
+  sneakerImage.style.backgroundImage = `url(${imageArr[currentImageIndex]})`;
+});
+
+arrowNext.addEventListener('click', function() {
+  // Increment the current image index
+  currentImageIndex++;
+
+  // If the current index is greater than or equal to the array length, wrap around to the first image
+  if (currentImageIndex >= imageArr.length) {
+    currentImageIndex = 0;
+  }
+
+  // Set the new image
+  sneakerImage.style.backgroundImage = `url(${imageArr[currentImageIndex]})`;
+});
