@@ -77,7 +77,6 @@ trashIcon.addEventListener('click', function(){
 
 // allows mobile users to cycle through different pictures of sneaker products using the left and right arrow buttons
 
-
 const arrowPrevious = document.querySelector('.arrow-previous-container');
 const arrowNext = document.querySelector('.arrow-next-container');
 const sneakerImage = document.querySelector('.image-container');
@@ -117,3 +116,5 @@ arrowNext.addEventListener('click', function() {
   // Set the new image
   sneakerImage.style.backgroundImage = `url(${imageArr[currentImageIndex]})`;
 });
+
+
