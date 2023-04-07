@@ -118,3 +118,31 @@ arrowNext.addEventListener('click', function() {
 });
 
 
+// Hamburger Menu
+
+const hamburgerOpen = document.querySelector('.hamburger-menu-btn');
+const hamburgerClose = document.querySelector('.hamburger-close');
+const hamburgerOverlay1 = document.querySelector('.hamburger-overlay-1');
+const hamburgerOverlay2 = document.querySelector('.hamburger-overlay-2');
+const fadeElems = document.querySelectorAll('.has-fade');
+const fadeElems2 = document.querySelectorAll('.has-fade2');
+// opens hamburger menu
+hamburgerOpen.addEventListener('click', function() {
+    hamburgerOverlay1.classList.remove('hidden');
+    hamburgerOverlay2.classList.remove('hidden');
+    fadeElems.forEach(function(element){
+        element.classList.remove('fade-out');
+        element.classList.add('fade-in');
+    });
+    fadeElems2.forEach(function(element){
+        element.classList.remove('fade-out2');
+        element.classList.add('fade-in2');
+    });
+});
+
+
+// closes hamburger menu
+hamburgerClose.addEventListener('click', function(){
+    hamburgerOverlay1.classList.add('hidden');
+    hamburgerOverlay2.classList.add('hidden');
+});

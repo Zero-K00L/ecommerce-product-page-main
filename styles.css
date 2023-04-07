@@ -31,6 +31,151 @@ body {
     font-family: 'Kumbh Sans', 'sans-serif';
 }
 
+.hamburger-overlay-1 {
+    display: block;
+    max-width: 64.266%;
+    margin-left: 0;
+    margin-right: auto;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: var(--white);
+    z-index: 1;
+}
+
+.hamburger-overlay-2 {
+    display: block;
+    max-width: 35.734%;
+    margin-left: auto;
+    margin-right: 0;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: var(--black);
+    filter: contrast(13);
+    opacity: 0.8;
+    z-index: 1;
+}
+
+.hamburger-menu {
+    margin-top: 25px;
+    margin-left: 27px;
+}
+
+.hamburger-close {
+    margin-bottom: 34px;
+    cursor: pointer;
+}
+
+.hamburger-menu-text > p {
+    font-weight: bold;
+    font-size: 18px; 
+}
+
+.hamburger-menu-text > p:not(:last-of-type) {
+    margin-bottom: 20px;
+}
+
+/* Hamburger Menu Helper Classes */
+
+/* animations for sliding overlays */
+
+/* main overlay animation */
+@keyframes fade-in {
+    from {
+        visibility: hidden;
+        opacity: 0;
+    }
+    1% {
+        visibility: visible;
+        opacity: 0;
+    }
+    to {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        visibility: visible;
+        opacity: 1;
+    }
+    99% {
+        visibility: visible;
+        opacity: 0;
+    }
+    to {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+/* secondary overlay animation */
+
+@keyframes fade-in2 {
+    from {
+        visibility: hidden;
+        opacity: 0;
+    }
+    1% {
+        visibility: visible;
+        opacity: 0;
+    }
+    to {
+        visibility: visible;
+        opacity: 0.7;
+    }
+}
+
+@keyframes fade-out2 {
+    from {
+        visibility: visible;
+        opacity: 0.7;
+    }
+    99% {
+        visibility: visible;
+        opacity: 0;
+    }
+    to {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+/* Helper classes for animations */
+
+.fade-in {
+    animation: fade-in 200ms ease-in-out forwards;
+}
+
+.fade-out {
+    animation: fade-out 200ms ease-in-out forwards;
+}
+
+.fade-in2 {
+    animation: fade-in2 200ms ease-in-out forwards;
+}
+
+.fade-out2 {
+    animation: fade-out2 200ms ease-in-out forwards;
+}
+
+.has-fade {
+    visibility: hidden;
+}
+
+.has-fade2 {
+    visibility: hidden;
+}
+
+
+
+
 .nav-bar {
     width: 100%;
     height: 52px;
