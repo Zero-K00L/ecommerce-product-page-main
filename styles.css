@@ -614,6 +614,7 @@ body {
     .nav-bar {
         margin-left: 163px;
         height: 86px;
+        margin-right: 168px;
     }
 
     .nav-icon-container {
@@ -634,7 +635,7 @@ body {
     }
 
     .cart-icon-container {
-        margin-left: 246px;
+        margin-left: 287px;
         margin-top: 7px;
         margin-right: 46px;
     }
@@ -664,5 +665,63 @@ body {
         width: 445px;
         height: 445px;
     }
+
+    .main-content-container {
+        display: flex;
+    }
+
+    .main-header {
+        font-size: 44px;
+        width: 71%;
+        line-height: 1.1;
+        margin-bottom: 34px;
+    }
+
+    .main-description {
+        width: 65%;
+        font-size: 16px;
+        margin-bottom: 13px;
+    }
+
+    .cart-counter-container {
+        display: flex;
+    }
+
+    .product-counter {
+        width: 157px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .price-container {
+        height: 52px;
+    }
+
+    .price {
+        margin-bottom: 0;
+    }
+
+    .original-price {
+        margin-top: 0;
+        display: inline-block;
+        margin-left: 25px;
+        margin-bottom: 36px;
+    }
+
+    .cart-btn {
+        width: 272px;
+        margin-left: 16px;
+    }
+
+    .content-wrapper {
+        padding-top: 131px;
+        padding-left: 102px;
+    }
+
+    .sneaker-company {
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+
 
 }
