@@ -658,12 +658,13 @@ body {
     .image-gallery-mobile {
         margin-top: 91px;
         margin-left: 211px;
-        height: 545px;
+        height: 600px;
     }
 
     .image-container {
         width: 445px;
         height: 445px;
+        border-radius: 16px;
     }
 
     .main-content-container {
@@ -711,6 +712,7 @@ body {
     .cart-btn {
         width: 272px;
         margin-left: 16px;
+        box-shadow: 1px 18px 23px -12px var(--orange);
     }
 
     .content-wrapper {
@@ -721,6 +723,18 @@ body {
     .sneaker-company {
         font-size: 13px;
         margin-bottom: 20px;
+    }
+
+    .product-thumbnails-container {
+        margin-top: 31px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .product-thumbnail {
+        width: 87px;
+        height: 87px;
+        border-radius: 10px;
     }
 
 
