@@ -193,6 +193,11 @@ body {
     cursor: pointer;
 }
 
+.avatar:hover {
+    outline: 2px solid var(--orange);
+    border-radius: 50%;
+}
+
 .image-container {
     height: 302px;
     width: 100%;
@@ -546,6 +551,13 @@ body {
         cursor: pointer;
     }
 
+    .product-thumbnail {
+        cursor: pointer;
+    }
+
+    .product-thumbnail:hover  {
+        filter: opacity(50%);
+    }
 
     .cart-icon-container {
         display: inline-block;
@@ -557,6 +569,7 @@ body {
         margin-right: 40px;
         font-size: 14px;
     }
+    
 
     .avatar {
         width: 50px;
@@ -566,6 +579,22 @@ body {
 
     .main-content-container {
         
+    }
+
+    .cart-inventory {
+
+    }
+
+    .cart-btn:hover {
+        filter: opacity(75%);
+    }
+
+    .minus-btn:hover {
+        filter: opacity(75%);
+    }
+
+    .plus-btn:hover {
+        filter: opacity(75%);
     }
 
 
@@ -613,12 +642,13 @@ body {
 @media only screen and (min-width: 1440px) {
     .nav-bar {
         margin-left: 163px;
-        height: 86px;
+        height: 102px;
         margin-right: 168px;
     }
 
     .nav-icon-container {
-        margin-top: 27px;
+        margin-top: 13px;
+        height: 84px;
     }
 
     .logo {
@@ -628,6 +658,31 @@ body {
     .desktop-links > p {
         font-size: 15px;
         justify-content: initial;
+        height: 118px;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    .desktop-links > p::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 4px;
+        background-color: var(--orange);
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+
+    .desktop-links > p:hover::after {
+        transform: scaleX(1);
+    }
+
+    .desktop-links > p:hover {
+        color: var(--black);
     }
 
     .desktop-links > p:not(:last-of-type) {
@@ -652,7 +707,6 @@ body {
 
     .avatar {
         top: 1px;
-        
     }
 
     .image-gallery-mobile {
@@ -714,6 +768,13 @@ body {
         margin-left: 16px;
         box-shadow: 1px 18px 23px -12px var(--orange);
     }
+
+    .cart-counter {
+        top: -6px;
+        right: -6px;
+    }
+
+
 
     .content-wrapper {
         padding-top: 131px;

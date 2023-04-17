@@ -1,4 +1,5 @@
-const cartIcon = document.querySelector('.cart-icon');
+const cartIconMobile = document.querySelector('.cart-icon');
+const cartIconDesktop = document.querySelector('.cart-icon-grey');
 const cartScreen = document.querySelector('.cart-inventory');
 
 // reveals and hides cart inventory screen when cart icon is pressed
@@ -11,7 +12,8 @@ function revealCart() {
     }
 }
 
-cartIcon.addEventListener('click', revealCart);
+cartIconMobile.addEventListener('click', revealCart);
+cartIconDesktop.addEventListener('click', revealCart);
 
 // increments or decrements the amount of product to be added to the cart with the plus and minus buttons
 
