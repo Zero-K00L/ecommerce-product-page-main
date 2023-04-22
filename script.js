@@ -6,18 +6,28 @@ const cartScreen = document.querySelector('.cart-inventory');
 function revealCart() {
     if(cartScreen.classList.contains('hidden')) {
         cartScreen.classList.remove('hidden');
+        document.addEventListener('click', hideCart);
     }
     else {
         cartScreen.classList.add('hidden');
+        document.removeEventListener('click', hideCart);
     }
 }
 
+function hideCart(event) {
+    if (!cartScreen.contains(event.target) && event.target !== cartIconMobile && event.target !== cartIconDesktop && event.target !== cartBtn && event.target !== minusBtn && event.target !== plusBtn) {
+        cartScreen.classList.add('hidden');
+        document.removeEventListener('click', hideCart);
+    }
+}
+
+
 cartIconMobile.addEventListener('click', revealCart);
 cartIconDesktop.addEventListener('click', revealCart);
-cartIconMobile.addEventListener('mouseover', revealCart);
+/* cartIconMobile.addEventListener('mouseover', revealCart);
 cartIconDesktop.addEventListener('mouseover', revealCart);
 cartIconMobile.addEventListener('mouseout', revealCart);
-cartIconDesktop.addEventListener('mouseout', revealCart);
+cartIconDesktop.addEventListener('mouseout', revealCart); */
 
 // increments or decrements the amount of product to be added to the cart with the plus and minus buttons
 
