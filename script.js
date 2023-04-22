@@ -14,6 +14,10 @@ function revealCart() {
 
 cartIconMobile.addEventListener('click', revealCart);
 cartIconDesktop.addEventListener('click', revealCart);
+cartIconMobile.addEventListener('mouseover', revealCart);
+cartIconDesktop.addEventListener('mouseover', revealCart);
+cartIconMobile.addEventListener('mouseout', revealCart);
+cartIconDesktop.addEventListener('mouseout', revealCart);
 
 // increments or decrements the amount of product to be added to the cart with the plus and minus buttons
 
@@ -62,7 +66,7 @@ cartBtn.addEventListener('click',function() {
         emptyCart.classList.add('hidden');
         fullCart.classList.remove('hidden');
         cartQuantity.innerText = cartCounter.innerText;
-        cartTotal.innerText = '  $' + 125.00 * cartQuantity.innerText + ".00";
+        cartTotal.innerText = ' ' + ' $' + 125.00 * cartQuantity.innerText + ".00";
     }
 });
 
