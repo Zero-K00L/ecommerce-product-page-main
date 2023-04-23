@@ -597,6 +597,15 @@ body {
 
     }
 
+    .minus-btn-container {
+        padding-bottom: 8px;
+        cursor: pointer;
+    }
+
+    .plus-btn-container {
+        cursor: pointer;
+    }
+
     .cart-btn:hover {
         filter: opacity(75%);
     }
@@ -720,6 +729,11 @@ body {
         cursor: pointer;
         font-size: 14px;
     }
+
+    .cart-icon-grey:hover {
+        filter: brightness(0%);
+    }
+
 
     .avatar {
         top: 1px;

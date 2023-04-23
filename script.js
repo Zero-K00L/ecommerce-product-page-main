@@ -31,8 +31,8 @@ cartIconDesktop.addEventListener('mouseout', revealCart); */
 
 // increments or decrements the amount of product to be added to the cart with the plus and minus buttons
 
-const minusBtn = document.querySelector('.minus-btn');
-const plusBtn = document.querySelector('.plus-btn');
+const minusBtn = document.querySelector('.minus-btn-container');
+const plusBtn = document.querySelector('.plus-btn-container');
 const productAmount = document.querySelector('.product-amount');
 
 minusBtn.addEventListener('click', function() {
@@ -162,3 +162,33 @@ hamburgerClose.addEventListener('click', function(){
     hamburgerOverlay1.classList.add('hidden');
     hamburgerOverlay2.classList.add('hidden');
 });
+
+
+// For Desktop, allows users to click on a thumbnail of the product image and have main image updated with same photo has thumbnail
+
+const thumbnails = document.querySelectorAll('.product-thumbnail');
+const imageContainer = document.querySelector('.image-container');
+
+function selectThumbnail(event) {
+  // Remove border and opacity from all thumbnails
+  thumbnails.forEach(thumbnail => {
+    thumbnail.style.outline = 'none';
+    thumbnail.style.opacity = '1';
+  });
+
+  // Add border and reduce opacity for the selected thumbnail
+  const selectedThumbnail = event.target;
+  selectedThumbnail.style.outline = '3px solid orange';
+  selectedThumbnail.style.opacity = '0.4';
+
+  // Change the background image of the image container
+  const thumbnailIndex = Array.from(thumbnails).indexOf(selectedThumbnail) + 1;
+  const imageUrl = `images/image-product-${thumbnailIndex}.jpg`;
+  imageContainer.style.backgroundImage = `url(${imageUrl})`;
+}
+
+thumbnails.forEach(thumbnail => {
+  thumbnail.addEventListener('click', selectThumbnail);
+});
+
+
