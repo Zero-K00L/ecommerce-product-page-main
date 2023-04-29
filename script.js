@@ -15,7 +15,7 @@ function revealCart() {
 }
 
 function hideCart(event) {
-    if (!cartScreen.contains(event.target) && event.target !== cartIconMobile && event.target !== cartIconDesktop && event.target !== cartBtn && event.target !== minusBtn && event.target !== plusBtn) {
+    if (!cartScreen.contains(event.target) && event.target !== cartIconMobile && event.target !== cartIconDesktop && event.target !== cartBtn && event.target !== minusBtnContainer && event.target !== plusBtnContainer && event.target !== minusBtn && event.target !== plusBtn) {
         cartScreen.classList.add('hidden');
         document.removeEventListener('click', hideCart);
     }
@@ -31,11 +31,13 @@ cartIconDesktop.addEventListener('mouseout', revealCart); */
 
 // increments or decrements the amount of product to be added to the cart with the plus and minus buttons
 
-const minusBtn = document.querySelector('.minus-btn-container');
-const plusBtn = document.querySelector('.plus-btn-container');
+const minusBtnContainer = document.querySelector('.minus-btn-container');
+const plusBtnContainer = document.querySelector('.plus-btn-container');
+const minusBtn = document.querySelector('.minus-btn');
+const plusBtn = document.querySelector('.plus-btn');
 const productAmount = document.querySelector('.product-amount');
 
-minusBtn.addEventListener('click', function() {
+minusBtnContainer.addEventListener('click', function() {
     if(productAmount.innerText == 0) {
         productAmount.innerText = 0;
     }
@@ -45,7 +47,7 @@ minusBtn.addEventListener('click', function() {
 });
 
 
-plusBtn.addEventListener('click', function(){
+plusBtnContainer.addEventListener('click', function(){
     if(productAmount.innerText == 99) {
         productAmount.innerText = 99;
     }
@@ -85,6 +87,7 @@ cartBtn.addEventListener('click',function() {
 const trashIcon = document.querySelector('.trash-icon');
 
 trashIcon.addEventListener('click', function(){
+    event.stopPropagation();
     cartCounter.classList.add('hidden');
     fullCart.classList.add('hidden');
     emptyCart.classList.remove('hidden');
@@ -163,6 +166,7 @@ hamburgerClose.addEventListener('click', function(){
     hamburgerOverlay2.classList.add('hidden');
 });
 
+ 
 
 // For Desktop, allows users to click on a thumbnail of the product image and have main image updated with same photo has thumbnail
 
@@ -172,13 +176,13 @@ const imageContainer = document.querySelector('.image-container');
 function selectThumbnail(event) {
   // Remove border and opacity from all thumbnails
   thumbnails.forEach(thumbnail => {
-    thumbnail.style.outline = 'none';
+    thumbnail.style.boxShadow = 'none';
     thumbnail.style.opacity = '1';
   });
 
   // Add border and reduce opacity for the selected thumbnail
   const selectedThumbnail = event.target;
-  selectedThumbnail.style.outline = '3px solid orange';
+  selectedThumbnail.style.boxShadow = '0 0 0 3px orange';
   selectedThumbnail.style.opacity = '0.4';
 
   // Change the background image of the image container
@@ -189,6 +193,143 @@ function selectThumbnail(event) {
 
 thumbnails.forEach(thumbnail => {
   thumbnail.addEventListener('click', selectThumbnail);
+});
+
+// Add border to the first thumbnail on page load
+thumbnails[0].style.boxShadow = '0 0 0 3px orange';
+thumbnails[0].style.opacity = '0.4';
+
+// Set the initial background image of the image container
+imageContainer.style.backgroundImage = `url(images/image-product-1.jpg)`;
+
+
+
+/* // Lightbox
+
+const lightboxThumbnails = document.querySelectorAll('.lightbox-thumbnail');
+const lightboxImage = document.querySelector('.lightbox-image');
+
+function selectLightboxThumbnail(event) {
+  // Remove border and opacity from all lightbox thumbnails
+  lightboxThumbnails.forEach(thumbnail => {
+    thumbnail.style.outline = 'none';
+    thumbnail.style.opacity = '1';
+  });
+
+  // Add border and reduce opacity for the selected lightbox thumbnail
+  const selectedThumbnail = event.target;
+  selectedThumbnail.style.outline = '3px solid orange';
+  selectedThumbnail.style.opacity = '0.4';
+
+  // Change the source of the lightbox image
+  const thumbnailIndex = Array.from(lightboxThumbnails).indexOf(selectedThumbnail) + 1;
+  const imageUrl = `images/image-product-${thumbnailIndex}.jpg`;
+  lightboxImage.style.backgroundImage = `url(${imageUrl})`;
+}
+
+lightboxThumbnails.forEach(thumbnail => {
+  thumbnail.addEventListener('click', selectLightboxThumbnail);
+});
+
+// Add border to the first lightbox thumbnail on page load
+lightboxThumbnails[0].style.outline = '3px solid orange';
+lightboxThumbnails[0].style.opacity = '0.4';
+
+// Set the initial background image of the lightbox image
+lightboxImage.style.backgroundImage = `url(images/image-product-1.jpg)`;
+
+
+// Closes Lightbox
+
+const lightbox = document.querySelector('.lightbox');
+const lightboxClose = document.querySelector('.lightbox-close');
+const cartInventory = document.querySelector('.cart-inventory');
+
+function closeLightbox() {
+  lightbox.classList.add('hidden');
+}
+
+lightboxClose.addEventListener('click', closeLightbox);
+
+// Opens Lightbox
+
+imageContainer.addEventListener('click', function(event) {
+    if (!event.target.closest('.cart-inventory')) {
+      lightbox.classList.remove('hidden');
+    }
+});
+ */
+
+const lightboxThumbnails = document.querySelectorAll('.lightbox-thumbnail');
+const lightboxImage = document.querySelector('.lightbox-image');
+const prevArrow = document.querySelector('.lightbox-arrow-previous-container');
+const nextArrow = document.querySelector('.lightbox-arrow-next-container');
+let currentThumbnailIndex = 0;
+
+function selectLightboxThumbnail(index) {
+  // Remove border and opacity from all lightbox thumbnails
+  lightboxThumbnails.forEach(thumbnail => {
+    thumbnail.style.outline = 'none';
+    thumbnail.style.opacity = '1';
+  });
+
+  // Add border and reduce opacity for the selected lightbox thumbnail
+  const selectedThumbnail = lightboxThumbnails[index];
+  selectedThumbnail.style.outline = '3px solid orange';
+  selectedThumbnail.style.opacity = '0.4';
+
+  // Change the source of the lightbox image
+  const imageUrl = `images/image-product-${index + 1}.jpg`;
+  lightboxImage.style.backgroundImage = `url(${imageUrl})`;
+  currentThumbnailIndex = index;
+}
+
+function showNextImage() {
+  currentThumbnailIndex++;
+  if (currentThumbnailIndex >= lightboxThumbnails.length) {
+    currentThumbnailIndex = 0;
+  }
+  selectLightboxThumbnail(currentThumbnailIndex);
+}
+
+function showPrevImage() {
+  currentThumbnailIndex--;
+  if (currentThumbnailIndex < 0) {
+    currentThumbnailIndex = lightboxThumbnails.length - 1;
+  }
+  selectLightboxThumbnail(currentThumbnailIndex);
+}
+
+lightboxThumbnails.forEach((thumbnail, index) => {
+  thumbnail.addEventListener('click', () => {
+    selectLightboxThumbnail(index);
+  });
+});
+
+prevArrow.addEventListener('click', showPrevImage);
+nextArrow.addEventListener('click', showNextImage);
+
+// Add border to the first lightbox thumbnail on page load
+selectLightboxThumbnail(0);
+
+// Closes Lightbox
+
+const lightbox = document.querySelector('.lightbox');
+const lightboxClose = document.querySelector('.lightbox-close');
+const cartInventory = document.querySelector('.cart-inventory');
+
+function closeLightbox() {
+  lightbox.classList.add('hidden');
+}
+
+lightboxClose.addEventListener('click', closeLightbox);
+
+// Opens Lightbox
+
+imageContainer.addEventListener('click', function(event) {
+  if (!event.target.closest('.cart-inventory')) {
+    lightbox.classList.remove('hidden');
+  }
 });
 
 
