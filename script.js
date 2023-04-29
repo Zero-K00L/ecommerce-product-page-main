@@ -327,9 +327,9 @@ lightboxClose.addEventListener('click', closeLightbox);
 // Opens Lightbox
 
 imageContainer.addEventListener('click', function(event) {
-  if (!event.target.closest('.cart-inventory')) {
-    lightbox.classList.remove('hidden');
-  }
+    if (window.matchMedia("(min-width: 992px)").matches && !event.target.closest('.cart-inventory')) {
+      lightbox.classList.remove('hidden');
+    }
 });
 
 
