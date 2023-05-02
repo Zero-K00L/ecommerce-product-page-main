@@ -26,7 +26,7 @@ body {
 
 .main {
     width: 100%;
-    height: 900px;
+    height: 100%;
     background-color: var(--white);
     font-family: 'Kumbh Sans', 'sans-serif';
 }
@@ -406,6 +406,7 @@ body {
     font-family: 'Kumbh Sans', sans-serif;
     box-shadow: 1px 9px 18px 0px var(--paleOrange);
     cursor: pointer;
+    margin-bottom: 25px;
 }
 
 .cart-icon-btn {
@@ -424,8 +425,7 @@ body {
     z-index: 1;
     position: relative;
     background-color: var(--white);
-    margin-left: 6px;
-    margin-top: 10px;
+    margin: 10px auto 0 auto;
     border-radius: 10px;
     box-shadow: 0px 0px 23px 0px var(--darkGrayishBlue);
 }
@@ -515,15 +515,101 @@ body {
 }
 
 
-/* .product-image-1 {
-    width: 100%;
-    height: 375px;
-    position: relative;
-    top: -37px;
-} */
-
 /* .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); } */
+
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+    .main {
+        height: 100%;
+    }    
+
+    .logo {
+        margin-right: 461px;
+    }
+
+    .avatar {
+        width: 40px;
+        height: 40px;
+    }
+
+    .cart-icon {
+        position: relative;
+        top: -5px;
+    }
+
+    .image-container {
+        margin-top: 19px;
+        height: 795px;
+    }
+
+    .arrow-previous-container {
+        width: 80px;
+        height: 80px;
+        left: 1px;
+    }
+
+    .arrow-next-container {
+        width: 80px;
+        height: 80px;
+        left: 89.5%;
+    }
+
+    .arrow-next {
+        height: 31px;
+    }
+
+    .arrow-previous {
+        height: 31px;
+    }
+
+    .sneaker-company {
+        font-size: 17px;
+        text-align: center;
+    }
+
+
+
+    .main-header {
+        font-size: 31px;
+        text-align: center;
+    }
+
+    .main-description {
+        font-size: 17px;
+        text-align: center;
+    }
+
+    .price-container {
+        margin-left: 236px;
+    }
+
+    .product-counter {
+        margin-left: 245px;
+    }
+
+    .cart-btn {
+        margin-bottom: 42px;
+        margin-left: 245px;
+    }
+
+    .cart-inventory {
+        left: 393px;
+    }
+
+    .cart-inventory {
+        margin-left: 6px;
+        margin-top: 10px;
+    }
+
+
+
+} 
+
+
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
@@ -535,8 +621,8 @@ body {
     .nav-bar {
         height: 86px;
         width: auto;
-        margin-left: 77px;
-        margin-right: 77px;
+        margin-left: 61px;
+        margin-right: 69px;
         border-bottom: 1px solid var(--grayishBlue);
     }
 
@@ -589,7 +675,9 @@ body {
     .cart-icon-container {
         display: inline-block;
         position: relative;
-        margin-left: 118px;
+        margin-left: 161px;
+        margin-top: 7px;
+        margin-right: 46px;
     }
 
     .cart-icon {
@@ -612,6 +700,7 @@ body {
     .plus-btn-container {
         cursor: pointer;
     }
+    
 
     .cart-btn:hover {
         filter: opacity(75%);
@@ -633,7 +722,10 @@ body {
         display: inline-block;
         margin-left: 113px;
         border-radius: 12px;
-        height: 445px;
+
+        margin-top: 91px;
+        margin-left: 61px;
+        height: 600px;
     }
 
     .image-container {
@@ -667,8 +759,8 @@ body {
     }
 
     .lightbox-content-container {
-        width: 69%;
-        height: 77%;
+        width: 73%;
+        height: 78%;
         display: flex;
         justify-content: flex-end;
         margin-top: 81px;
@@ -680,6 +772,7 @@ body {
         width: 38px;
         cursor: pointer;
         position: absolute;
+        top: 65px;
     }
 
     .lightbox-close:hover {
@@ -692,19 +785,19 @@ body {
         left: 50%;
         top: 46%;
         transform: translate(-50%, -50%);
-        width: 550px;
-        height: 550px;
+        width: 450px;
+        height: 450px;
         background-size: contain;
         object-fit: contain;
         border-radius: 16px;
     }
 
-    
+
 
     .lightbox-arrow-previous-container {
         position: absolute;
         top: 43.8%;
-        left: -5%;
+        left: -7%;
         width: 58px;
         background-color: var(--white);
         border-radius: 50%;
@@ -748,7 +841,7 @@ body {
         height: 78px;
         align-self: flex-end;
         position: relative;
-        left: -52px;
+        left: 1px;
         top: 19px;
     }
 
@@ -763,11 +856,6 @@ body {
 
     /* 992 Pasted Query stuff */
 
-    .nav-bar {
-        margin-left: 163px;
-        height: 102px;
-        margin-right: 168px;
-    }
 
     .nav-icon-container {
         margin-top: 13px;
@@ -779,9 +867,9 @@ body {
     }
 
     .desktop-links > p {
-        font-size: 15px;
+        font-size: 14px;
         justify-content: initial;
-        height: 118px;
+        height: 87px;
         display: flex;
         align-items: center;
         box-sizing: border-box;
@@ -813,9 +901,7 @@ body {
     }
 
     .cart-icon-container {
-        margin-left: 244px;
-        margin-top: 7px;
-        margin-right: 46px;
+
     }
     
     .cart-icon {
@@ -838,9 +924,7 @@ body {
     }
 
     .image-gallery-mobile {
-        margin-top: 91px;
-        margin-left: 162px;
-        height: 600px;
+
     }
 
 
@@ -848,17 +932,23 @@ body {
         display: flex;
     }
 
+    .sneaker-company {
+        text-align: left;
+    }
+
     .main-header {
-        font-size: 41px;
+        font-size: 34px;
         width: 71%;
         line-height: 1.1;
         margin-bottom: 34px;
+        text-align: left;
     }
 
     .main-description {
         width: 65%;
-        font-size: 16px;
+        font-size: 14px;
         margin-bottom: 13px;
+        text-align: left;
     }
 
     .cart-counter-container {
@@ -869,10 +959,12 @@ body {
         width: 157px;
         padding-left: 16px;
         padding-right: 16px;
+        margin-left: 0;
     }
 
     .price-container {
         height: 52px;
+        margin-left: 0;
     }
 
     .price {
@@ -886,7 +978,6 @@ body {
     .original-price-desktop {
         margin-top: 0;
         display: inline-block;
-        margin-left: 25px;
         margin-bottom: 36px;
         color: var(--grayishBlue);
         text-decoration: line-through;
@@ -894,7 +985,7 @@ body {
     }
 
     .cart-btn {
-        width: 272px;
+        width: 218px;
         margin-left: 16px;
         box-shadow: 1px 18px 23px -12px var(--orange);
     }
@@ -928,13 +1019,18 @@ body {
 
     .cart-inventory {
         position: absolute;
-        left: 770px;
+        left: 533px;
         top: -117px;
         box-shadow: 0px 10px 22px -8px var(--darkGrayishBlue);
+        margin-top: 0;
     }
 
     .image-container {
         overflow: visible;
+    }
+
+    .text-container {
+        margin-left: 0px;
     }
 
 
@@ -952,6 +1048,59 @@ body {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+
+    .lightbox-arrow-previous-container {
+        position: absolute;
+        top: 43.8%;
+        left: -5%;
+        width: 58px;
+        background-color: var(--white);
+        border-radius: 50%;
+        height: 58px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .lightbox-thumbnail-container {
+        display: inline-block;
+        height: 78px;
+        align-self: flex-end;
+        position: relative;
+        left: -52px;
+        top: 19px;
+    }
+
+    .lightbox-content-container {
+        width: 69%;
+        height: 77%;
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 81px;
+    }
+
+    .lightbox-image {
+        background-image: url('images/image-product-1.jpg');
+        position: absolute;
+        left: 50%;
+        top: 46%;
+        transform: translate(-50%, -50%);
+        width: 550px;
+        height: 550px;
+        background-size: contain;
+        object-fit: contain;
+        border-radius: 16px;
+    }
+
+    .lightbox-close {
+        fill: var(--white);
+        height: 38px;
+        width: 38px;
+        cursor: pointer;
+        position: absolute;
+    }
+
     .nav-bar {
         margin-left: 163px;
         height: 102px;
@@ -1080,7 +1229,6 @@ body {
     .original-price-desktop {
         margin-top: 0;
         display: inline-block;
-        margin-left: 25px;
         margin-bottom: 36px;
         color: var(--grayishBlue);
         text-decoration: line-through;
@@ -1124,7 +1272,7 @@ body {
 
     .cart-inventory {
         position: absolute;
-        left: 770px;
+        left: 654px;
         top: -117px;
         box-shadow: 0px 10px 22px -8px var(--darkGrayishBlue);
     }
@@ -1266,7 +1414,6 @@ body {
     .original-price-desktop {
         margin-top: 0;
         display: inline-block;
-        margin-left: 25px;
         margin-bottom: 36px;
         color: var(--grayishBlue);
         text-decoration: line-through;
@@ -1317,6 +1464,10 @@ body {
 
     .image-container {
         overflow: visible;
+    }
+
+    .lightbox-close {
+        top: 152px;
     }
 
 
