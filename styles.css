@@ -229,6 +229,10 @@ body {
     margin-right: 85px;
 }
 
+.mobile-icon-container {
+
+}
+
 .cart-icon-container {
     display: inline-block;
     position: relative;
@@ -236,8 +240,6 @@ body {
 
 .cart-icon {
     margin-right: 18px;
-/*     position: relative; */
-/*     top: 3px; */
     cursor: pointer;
 }
 
@@ -520,6 +522,85 @@ body {
 
 
 
+/* Extra small devices (phones, 349px and down) */
+@media only screen and (max-width: 349px) {
+    .logo {
+        margin-right: calc(40vw - 90px);
+    }
+}
+
+
+
+/* Extra small devices (phones, 400px and down) */
+@media only screen and (min-width: 400px) and (max-width: 767px) {
+    .nav-bar {
+        width: 100%;
+        height: 52px;
+      }
+      
+      .desktop-links {
+        display: none;
+      }
+      
+      .avatar {
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        right: 20px;
+        cursor: pointer;
+        top: -1px;
+      }
+      
+      .avatar:hover {
+        outline: 2px solid var(--orange);
+        border-radius: 50%;
+      }
+      
+      .nav-icon-container {
+        position: relative;
+      }
+      
+      .hamburger-menu-btn {
+        margin-right: 12px;
+        cursor: pointer;
+      }
+      
+      .logo {
+        position: relative;
+        top: 1px;
+        margin-right: 85px;
+      }
+      
+      .cart-icon-container {
+        display: inline-block;
+        position: absolute;
+        right: 50px;
+      }
+      
+      .cart-icon {
+        margin-right: 18px;
+        cursor: pointer;
+      }
+      
+      .cart-counter {
+        width: 19px;
+        height: 14px;
+        position: absolute;
+        top: -5px;
+        right: 12px;
+        background-color: var(--orange);
+        color: var(--white);
+        font-size: 10px;
+        font-weight: 700;
+        border-radius: 10px;
+        padding-left: 5px;
+        padding-top: 1px;
+      }
+}
+
+
+
+
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
 
@@ -528,7 +609,7 @@ body {
     }    
 
     .logo {
-        margin-right: 461px;
+        margin-right: calc(75vw - 90px);
     }
 
     .avatar {
@@ -1509,6 +1590,9 @@ body {
         margin-bottom: 32px;
     }
 
+    .original-price-desktop {
+        margin-bottom: 68px;
+    }
 
 
 }
