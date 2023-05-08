@@ -84,9 +84,6 @@ body {
     margin-bottom: 20px;
 }
 
-/* Hamburger Menu Helper Classes */
-
-/* animations for sliding overlays */
 
 /* main overlay animation */
 @keyframes fade-in {
@@ -257,8 +254,6 @@ body {
     padding-left: 5px;
     padding-top: 1px;
 }
-
-
 
 
 .arrow-previous-container {
@@ -508,18 +503,11 @@ body {
 }
 
 
-
-
 /* Helper Classes */
 
 .hidden {
     display: none;
 }
-
-
-/* .attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); } */
-
 
 
 /* Extra small devices (phones, 349px and down) */
@@ -528,7 +516,6 @@ body {
         margin-right: calc(40vw - 90px);
     }
 }
-
 
 
 /* Extra small devices (phones, 400px and down) */
@@ -597,7 +584,6 @@ body {
         padding-top: 1px;
       }
 }
-
 
 
 
@@ -685,11 +671,7 @@ body {
         margin-left: 6px;
         margin-top: 10px;
     }
-
-
-
 } 
-
 
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -853,7 +835,7 @@ body {
         width: 38px;
         cursor: pointer;
         position: absolute;
-        top: 65px;
+        top: 50px;
     }
 
     .lightbox-close:hover {
@@ -872,8 +854,6 @@ body {
         object-fit: contain;
         border-radius: 16px;
     }
-
-
 
     .lightbox-arrow-previous-container {
         position: absolute;
@@ -934,7 +914,6 @@ body {
         margin-right: 20px;
     }
 
-
     /* 992 Pasted Query stuff */
 
 
@@ -981,10 +960,6 @@ body {
         margin-right: 33px;
     }
 
-    .cart-icon-container {
-
-    }
-    
     .cart-icon {
         display: none;
     }
@@ -999,7 +974,6 @@ body {
         filter: brightness(0%);
     }
 
-
     .avatar {
         top: 1px;
     }
@@ -1007,7 +981,6 @@ body {
     .image-gallery-mobile {
 
     }
-
 
     .main-content-container {
         display: flex;
@@ -1076,8 +1049,6 @@ body {
         right: -6px;
     }
 
-
-
     .content-wrapper {
         padding-top: 88px;
         padding-left: 84px;
@@ -1114,17 +1085,7 @@ body {
         margin-left: 0px;
     }
 
-
-
-
-
-
 } 
-
-
-
-
-
 
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -1149,8 +1110,8 @@ body {
         height: 78px;
         align-self: flex-end;
         position: relative;
-        left: -52px;
-        top: 19px;
+        left: -26px;
+        top: 69px;
     }
 
     .lightbox-content-container {
@@ -1180,6 +1141,8 @@ body {
         width: 38px;
         cursor: pointer;
         position: absolute;
+        top: 9px;
+        left: 877px;
     }
 
     .nav-bar {
@@ -1327,8 +1290,6 @@ body {
         right: -6px;
     }
 
-
-
     .content-wrapper {
         padding-top: 131px;
         padding-left: 102px;
@@ -1361,7 +1322,6 @@ body {
     .image-container {
         overflow: visible;
     }
-
 }
 
 
@@ -1512,8 +1472,6 @@ body {
         right: -6px;
     }
 
-
-
     .content-wrapper {
         padding-top: 131px;
         padding-left: 102px;
@@ -1548,10 +1506,14 @@ body {
     }
 
     .lightbox-close {
-        top: 152px;
+        top: 138px;
+        left: 956px;
     }
 
-
+    .lightbox-thumbnail-container {
+        left: -33px;
+        top: -6px;
+    }
 }
 
 
@@ -1594,5 +1556,8 @@ body {
         margin-bottom: 68px;
     }
 
-
+    .lightbox-close {
+        top: 160px;
+        left: 1197px;
+    }
 }
