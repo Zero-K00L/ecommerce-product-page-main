@@ -21,13 +21,8 @@ function hideCart(event) {
     }
 }
 
-
 cartIconMobile.addEventListener('click', revealCart);
 cartIconDesktop.addEventListener('click', revealCart);
-/* cartIconMobile.addEventListener('mouseover', revealCart);
-cartIconDesktop.addEventListener('mouseover', revealCart);
-cartIconMobile.addEventListener('mouseout', revealCart);
-cartIconDesktop.addEventListener('mouseout', revealCart); */
 
 // increments or decrements the amount of product to be added to the cart with the plus and minus buttons
 
@@ -45,7 +40,6 @@ minusBtnContainer.addEventListener('click', function() {
         productAmount.innerText --;
     }
 });
-
 
 plusBtnContainer.addEventListener('click', function(){
     if(productAmount.innerText == 99) {
@@ -93,7 +87,6 @@ trashIcon.addEventListener('click', function(){
     emptyCart.classList.remove('hidden');
 });
 
-
 // allows mobile users to cycle through different pictures of sneaker products using the left and right arrow buttons
 
 const arrowPrevious = document.querySelector('.arrow-previous-container');
@@ -136,7 +129,6 @@ arrowNext.addEventListener('click', function() {
   sneakerImage.style.backgroundImage = `url(${imageArr[currentImageIndex]})`;
 });
 
-
 // Hamburger Menu
 
 const hamburgerOpen = document.querySelector('.hamburger-menu-btn');
@@ -159,14 +151,11 @@ hamburgerOpen.addEventListener('click', function() {
     });
 });
 
-
 // closes hamburger menu
 hamburgerClose.addEventListener('click', function(){
     hamburgerOverlay1.classList.add('hidden');
     hamburgerOverlay2.classList.add('hidden');
 });
-
- 
 
 // For Desktop, allows users to click on a thumbnail of the product image and have main image updated with same photo has thumbnail
 
@@ -201,64 +190,6 @@ thumbnails[0].style.opacity = '0.4';
 
 // Set the initial background image of the image container
 imageContainer.style.backgroundImage = `url(images/image-product-1.jpg)`;
-
-
-
-/* // Lightbox
-
-const lightboxThumbnails = document.querySelectorAll('.lightbox-thumbnail');
-const lightboxImage = document.querySelector('.lightbox-image');
-
-function selectLightboxThumbnail(event) {
-  // Remove border and opacity from all lightbox thumbnails
-  lightboxThumbnails.forEach(thumbnail => {
-    thumbnail.style.outline = 'none';
-    thumbnail.style.opacity = '1';
-  });
-
-  // Add border and reduce opacity for the selected lightbox thumbnail
-  const selectedThumbnail = event.target;
-  selectedThumbnail.style.outline = '3px solid orange';
-  selectedThumbnail.style.opacity = '0.4';
-
-  // Change the source of the lightbox image
-  const thumbnailIndex = Array.from(lightboxThumbnails).indexOf(selectedThumbnail) + 1;
-  const imageUrl = `images/image-product-${thumbnailIndex}.jpg`;
-  lightboxImage.style.backgroundImage = `url(${imageUrl})`;
-}
-
-lightboxThumbnails.forEach(thumbnail => {
-  thumbnail.addEventListener('click', selectLightboxThumbnail);
-});
-
-// Add border to the first lightbox thumbnail on page load
-lightboxThumbnails[0].style.outline = '3px solid orange';
-lightboxThumbnails[0].style.opacity = '0.4';
-
-// Set the initial background image of the lightbox image
-lightboxImage.style.backgroundImage = `url(images/image-product-1.jpg)`;
-
-
-// Closes Lightbox
-
-const lightbox = document.querySelector('.lightbox');
-const lightboxClose = document.querySelector('.lightbox-close');
-const cartInventory = document.querySelector('.cart-inventory');
-
-function closeLightbox() {
-  lightbox.classList.add('hidden');
-}
-
-lightboxClose.addEventListener('click', closeLightbox);
-
-// Opens Lightbox
-
-imageContainer.addEventListener('click', function(event) {
-    if (!event.target.closest('.cart-inventory')) {
-      lightbox.classList.remove('hidden');
-    }
-});
- */
 
 const lightboxThumbnails = document.querySelectorAll('.lightbox-thumbnail');
 const lightboxImage = document.querySelector('.lightbox-image');
