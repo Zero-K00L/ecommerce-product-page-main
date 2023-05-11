@@ -510,6 +510,11 @@ body {
 
 /* Extra small devices (phones, 400px and down) */
 @media only screen and (min-width: 400px) and (max-width: 767px) {
+
+    .image-container {
+        height: 70vw;
+    }
+
     .nav-bar {
         width: 100%;
         height: 52px;
@@ -574,8 +579,6 @@ body {
         padding-top: 1px;
     }
 }
-
-
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
@@ -661,7 +664,6 @@ body {
     }
 } 
 
-
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
 
@@ -679,7 +681,7 @@ body {
 
     .logo {
         margin-left: 0px;
-
+        margin-right: 56px;
     }
 
     .hamburger-menu-btn {
@@ -688,9 +690,11 @@ body {
 
     .nav-icon-container {
         display: flex;
-        margin-top: 32px;
         align-items: center;
         margin-left: 0px;
+        justify-content: space-between;
+        margin-top: 13px;
+        height: 84px;
     }
 
     .desktop-links {
@@ -703,6 +707,13 @@ body {
         margin: 0;
         color: var(--darkGrayishBlue);
         cursor: pointer;
+        font-size: 14px;
+        justify-content: initial;
+        height: 87px;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        position: relative;
     }
 
     .product-thumbnail {
@@ -727,10 +738,11 @@ body {
         position: relative;
         margin-left: 161px;
         margin-top: 7px;
-        margin-right: 46px;
+        margin-right: 10px;
     }
 
     .cart-icon {
+        display: none;
         margin-right: 40px;
         font-size: 14px;
     }
@@ -738,7 +750,7 @@ body {
     .avatar {
         width: 50px;
         height: 50px;
-        top: -1px;
+        top: 1px;
     }
 
     .minus-btn-container {
@@ -762,14 +774,11 @@ body {
         filter: opacity(75%);
     }
 
-/*     Image Gallery */
-
     .image-gallery-mobile {
         margin-top: 48px;
         display: inline-block;
         margin-left: 113px;
         border-radius: 12px;
-
         margin-top: 91px;
         margin-left: 61px;
         height: 600px;
@@ -792,6 +801,9 @@ body {
 
     .cart-icon-grey {
         display: inline-block;
+        margin-right: 0;
+        cursor: pointer;
+        font-size: 14px;
     }
 
     .lightbox {
@@ -903,28 +915,6 @@ body {
         margin-right: 20px;
     }
 
-    /* 992 Pasted Query stuff */
-
-
-    .nav-icon-container {
-        margin-top: 13px;
-        height: 84px;
-    }
-
-    .logo {
-        margin-right: 56px;
-    }
-
-    .desktop-links > p {
-        font-size: 14px;
-        justify-content: initial;
-        height: 87px;
-        display: flex;
-        align-items: center;
-        box-sizing: border-box;
-        position: relative;
-    }
-
     .desktop-links > p::after {
         content: "";
         position: absolute;
@@ -949,23 +939,10 @@ body {
         margin-right: 33px;
     }
 
-    .cart-icon {
-        display: none;
-    }
-
-    .cart-icon-grey {
-        margin-right: 0;
-        cursor: pointer;
-        font-size: 14px;
-    }
-
     .cart-icon-grey:hover {
         filter: brightness(0%);
     }
 
-    .avatar {
-        top: 1px;
-    }
 
     .main-content-container {
         display: flex;
@@ -1052,7 +1029,7 @@ body {
 
     .cart-inventory {
         position: absolute;
-        left: 533px;
+        left: 56vw;
         top: -117px;
         box-shadow: 0px 10px 22px -8px var(--darkGrayishBlue);
         margin-top: 0;
@@ -1089,9 +1066,6 @@ body {
         width: 550px;
         height: 550px;
     }
-
-
-
 
     .nav-bar {
         margin-left: 163px;
@@ -1145,7 +1119,6 @@ body {
     .cart-icon-container {
         margin-left: 244px;
         margin-top: 7px;
-        margin-right: 46px;
     }
     
     .cart-icon {
@@ -1261,7 +1234,7 @@ body {
 
     .cart-inventory {
         position: absolute;
-        left: 654px;
+        left: 53vw;
         top: -117px;
         box-shadow: 0px 10px 22px -8px var(--darkGrayishBlue);
     }
@@ -1326,7 +1299,6 @@ body {
     .cart-icon-container {
         margin-left: 287px;
         margin-top: 7px;
-        margin-right: 46px;
     }
     
     .cart-icon {
@@ -1342,7 +1314,6 @@ body {
     .cart-icon-grey:hover {
         filter: brightness(0%);
     }
-
 
     .avatar {
         top: 1px;
@@ -1443,7 +1414,7 @@ body {
 
     .cart-inventory {
         position: absolute;
-        left: 770px;
+        left: 52vw;
         top: -117px;
         box-shadow: 0px 10px 22px -8px var(--darkGrayishBlue);
     }
@@ -1479,7 +1450,7 @@ body {
     }
 
     .cart-inventory {
-        left: 1178px;
+        left: 65vw;
     }
 
     .lightbox-thumbnail-container {
