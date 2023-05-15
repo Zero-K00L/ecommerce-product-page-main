@@ -504,6 +504,9 @@ body {
     display: none;
 }
 
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
 
 /* Extra small devices (phones, 349px and down) */
 @media only screen and (max-width: 349px) {
